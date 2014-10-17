@@ -1,0 +1,15 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	#rainbowsafari {
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 100px;
+		z-index: 99999999999;
+		position: fixed;
+		content: "";
+		display: block;
+		-webkit-transform: translateY(-99.99px);
+		/* Add your own styling after this to customize RainbowSarari */
+		background-color: red;
+	}
+}

@@ -12,26 +12,27 @@
         <script>
         var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
         $( document ).ready(function() {
+          var rainbowSafari = $('#rainbowsafari');
           if (isSafari) {
               window.onscroll = function () { 
                 var doc = document.body, 
                 scrollPosition = doc.scrollTop
-                  $( "#rainbowsafari" ).height( 100 ).css({
+                  rainbowSafari.height( 100 ).css({
                     top: scrollPosition - 100
                   });
                }; 
            }
           $("#btn-rainbow").click(function(){
-            $("#rainbowsafari").toggleClass("rs-rainbow").removeClass( "rs-picture rs-blue rs-blank" );;
+            rainbowSafari.toggleClass("rs-rainbow").removeClass( "rs-picture rs-blue rs-blank" );;
           });
           $("#btn-none").click(function(){
-            $("#rainbowsafari").removeClass( "rs-rainbow rs-blue rs-blank" );;
+            rainbowSafari.removeClass( "rs-rainbow rs-blue rs-blank" );;
           });
           $("#btn-blue").click(function(){
-            $("#rainbowsafari").toggleClass("rs-blue").removeClass( "rs-picture rs-rainbow rs-blank" );;
+            rainbowSafari.toggleClass("rs-blue").removeClass( "rs-picture rs-rainbow rs-blank" );;
           });
           $("#btn-blank").click(function(){
-            $("#rainbowsafari").toggleClass("rs-blank").removeClass( "rs-picture rs-blue rs-rainbow" );;
+            rainbowSafari.toggleClass("rs-blank").removeClass( "rs-picture rs-blue rs-rainbow" );;
           });
         });
         </script>
@@ -106,10 +107,11 @@
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 $( document ).ready(function() {
   if (isSafari) {
+      var rainbowSafari = $('rainbowsafari');
       window.onscroll = function () { 
         var doc = document.body, 
         scrollPosition = doc.scrollTop
-          $( "#rainbowsafari" ).height( 100 ).css({
+          rainbowSafari.height( 100 ).css({
             top: scrollPosition - 100
           });
        }; 

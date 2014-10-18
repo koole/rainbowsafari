@@ -1,10 +1,10 @@
-.rainbowsafari-blue {
+#rainbowsafari {
 	display: block;
-	position: fixed;
-	top: 0;
+	position: absolute;
 	left: 0;
 	right: 0;
-	height: 100px;
+	top: 0;
+	height: 0px;
 	content: ' ';
 	background: blue;
 }

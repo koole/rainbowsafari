@@ -8,20 +8,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/RS.css"> 
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 window.onload = function () { 
   window.onscroll = function () { 
     var doc = document.body, 
     scrollPosition = doc.scrollTop
      if (scrollPosition <= 100){
-       window.scrollTo(0,100); 
+       $( "#rainbowsafari" ).height( scrollPosition );
+     }
+     else {
+        $( "#rainbowsafari" ).height( 100 ).css({
+            top: scrollPosition - 100
+        });
      }
    }; 
 };
 </script>
     </head>
     <body>
-        <div class="rainbowsafari-blue">Test</div>
+        <div id="rainbowsafari">Test</div>
         <br>
         <br>
         <br>

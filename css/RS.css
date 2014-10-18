@@ -5,6 +5,7 @@
 	right: 0;
 	top: 0;
 	height: 0px;
+	z-index: 99999999999;
 }
 
 .rs-rainbow {
@@ -16,4 +17,10 @@
         color-stop(65%, rgba(0, 0, 255, 1)),
         color-stop(80%, rgba(255, 0, 255, 1)),
         color-stop(100%, rgba(255, 0, 0, 1)));
+}
+
+.rs-img {
+	background-image: url('http://i.imgur.com/4Vg2UTC.gif');
+	background-size: cover;
+	background-position: center;
 }

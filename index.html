@@ -6,8 +6,8 @@
         <title>RainbowSafari</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/RS.css"> 
+        <link rel="stylesheet" href="../UI/css/style.css">
+        <link rel="stylesheet" href="css/RS.css">
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
@@ -25,170 +25,84 @@ $( document ).ready(function() {
 </script>
     </head>
     <body>
-        <div id="rainbowsafari" class="rs-rainbow"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>Get scroll amount
-        <br>If scroll amount =< 100 :
-        <br>>  Scroll amount = div height
-        <br>If scroll amount > 100 :
-        <br>>  Scroll amount == 100
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div id="rainbowsafari" class="rs-img"></div>
+        <header class="jbt-huge text-center primary-bg">
+            <div class="container">
+                <div class="text-huge">RainbowSafari</div>
+                <div class="col-md-6">
+                    <h2>Hide what you want to hide</h2>
+                </div>
+                <div class="col-md-6">
+                    <h2>Customize users browsers.</h2>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="col-md-12 text-center">
+                <h1>Scroll down</h1>
+                <h5>If you are using Safari 8 on Yosemite, you might have noticed by now.<br>
+                The big blue header is not visible behind the blurred "menu bar" in safari.
+                Instead, you see a nice rainbow.</h5>
+                <hr>
+                <h2>Why?</h2>
+            </div>
+            <div class="col-md-6">
+                <h3>The problem</h3>
+                <p>I was annoyed by "hidden menus" not being fully hidden on Safari 8. If you look at for example a medium.com article, and scroll down, the menu at the top of the page moves up (disappears) and shows again when you scroll down. But in Safari 8, it does not fully disappear, as its still visible behind the blurred background. <p>
+            </div>
+            <div class="col-md-6">
+                <h3>The solution</h3>
+                <p>The idea to solve this was to add an overlay top of the page, with the same color as the website background color, to hide everything that was supposed to scroll behind it. But then came up with an <strong>even better idea</strong>. The background of the overlay could be any color. <strong>Yes, any.</strong> Thats when RainbowSafari was created.
+            </div>
+            <div class="col-md-12 text-center">
+                <h2>Why?</h2>
+            </div>
+            <div class="col-md-6">
+                <h3>The problem</h3>
+                <p>I was annoyed by "hidden menus" not being fully hidden on Safari 8. If you look at for example a medium.com article, and scroll down, the menu at the top of the page moves up (disappears) and shows again when you scroll down. But in Safari 8, it does not fully disappear, as its still visible behind the blurred background. <p>
+            </div>
+            <div class="col-md-6">
+                <h3>The solution</h3>
+                <p>The idea to solve this was to add an overlay top of the page, with the same color as the website background color, to hide everything that was supposed to scroll behind it. But then came up with an <strong>even better idea</strong>. The background of the overlay could be any color. <strong>Yes, any.</strong> Thats when RainbowSafari was created.
+            </div>
+            <div class="col-md-12 text-center">
+                <h1>Examples</h1>
+                <img src="img/rainbow.png" alt="Rainbow preview" style="max-width: 100%;">
+            </div>
+            <div class="col-md-12 text-center">
+                <h2>Get it</h2>
+            </div>
+            <div class="col-md-6">
+                <h3>Javascript</h3>
+                <pre>
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+$( document ).ready(function() {
+  if (isSafari) {
+      window.onscroll = function () { 
+        var doc = document.body, 
+        scrollPosition = doc.scrollTop
+          $( "#rainbowsafari" ).height( 100 ).css({
+            top: scrollPosition - 100
+          });
+       }; 
+   }
+});</pre>
+            </div>
+            <div class="col-md-6">
+                <h3>CSS</h3>
+                <pre>
+#rainbowsafari {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0px;
+    z-index: 99999999999;
+}</pre>
+            </div>
+            <div class="col-md-12 text-center">
+                <h1>Problems</h1>
+                <p>As it uses javascript to get the scroll position, rainbow safari sometimes lags behind a little bit. Especially when using trackpads with natural scrolling. If <strong>you</strong> have a solution for this, please contribute!</p>
+                <p><a href="http://github.com/LymXX/RainbowSafari" class="btn btn-inverse">View on Github</a></p>
+            </div>
     </body>

@@ -1,10 +1,19 @@
+
 #rainbowsafari {
-	display: block;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	height: 0px;
-	content: ' ';
-	background: blue;
+}
+
+.rs-rainbow {
+	background: -webkit-gradient(linear,  left top,  right top, 
+        color-stop(0%, rgba(255, 0, 0, 1)), 
+        color-stop(15%, rgba(255, 255, 0, 1)),
+        color-stop(30%, rgba(0, 255, 0, 1)),
+        color-stop(50%, rgba(0, 255, 255, 1)),
+        color-stop(65%, rgba(0, 0, 255, 1)),
+        color-stop(80%, rgba(255, 0, 255, 1)),
+        color-stop(100%, rgba(255, 0, 0, 1)));
 }

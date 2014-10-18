@@ -10,14 +10,17 @@
         <link rel="stylesheet" href="css/RS.css"> 
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 $( document ).ready(function() {
-  window.onscroll = function () { 
-    var doc = document.body, 
-    scrollPosition = doc.scrollTop
-      $( "#rainbowsafari" ).height( 100 ).css({
-        top: scrollPosition - 100
-      });
-   }; 
+  if (isSafari) {
+      window.onscroll = function () { 
+        var doc = document.body, 
+        scrollPosition = doc.scrollTop
+          $( "#rainbowsafari" ).height( 100 ).css({
+            top: scrollPosition - 100
+          });
+       }; 
+   }
 });
 </script>
     </head>

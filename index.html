@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/RS.css"> 
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-window.onload = function () { 
+$( document ).ready(function() {
   window.onscroll = function () { 
     var doc = document.body, 
     scrollPosition = doc.scrollTop
@@ -18,7 +18,7 @@ window.onload = function () {
         top: scrollPosition - 100
       });
    }; 
-};
+});
 </script>
     </head>
     <body>

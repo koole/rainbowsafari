@@ -1,6 +1,6 @@
 
 #rainbowsafari {
-	position: absolute;
+	position: absolute; 
 	left: 0;
 	right: 0;
 	top: 0;
@@ -19,8 +19,11 @@
         color-stop(100%, rgba(255, 0, 0, 1)));
 }
 
-.rs-img {
-	background-image: url('http://i.imgur.com/4Vg2UTC.gif');
-	background-size: cover;
-	background-position: center;
+.rs-blue {
+	background-color: #1ea4f0;
 }
+
+.rs-blank {
+	background-color: inherit;
+}
+

@@ -14,14 +14,9 @@ window.onload = function () {
   window.onscroll = function () { 
     var doc = document.body, 
     scrollPosition = doc.scrollTop
-     if (scrollPosition <= 100){
-       $( "#rainbowsafari" ).height( scrollPosition );
-     }
-     else {
-        $( "#rainbowsafari" ).height( 100 ).css({
-            top: scrollPosition - 100
-        });
-     }
+      $( "#rainbowsafari" ).height( 100 ).css({
+        top: scrollPosition - 100
+      });
    }; 
 };
 </script>

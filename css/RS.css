@@ -27,3 +27,47 @@
 	background-color: inherit;
 }
 
+.random-color {
+	background: #fff;
+	
+	-webkit-animation: random-color 5s linear alternate infinite;
+          animation: random-color 5s linear alternate infinite;
+}
+
+@-webkit-keyframes random-color {
+  20% {
+    background: #08f48b;
+  }
+  40% {
+    background: #b7cc71;
+  }
+  60% {
+    background: #da7254;
+  }
+  80% {
+    background: #478db5;
+  }
+  100% {
+    background: #2e77ac;
+  }
+}
+
+@keyframes random-color {
+  20% {
+    background: #08f48b;
+  }
+  40% {
+    background: #b7cc71;
+  }
+  60% {
+    background: #da7254;
+  }
+  80% {
+    background: #478db5;
+  }
+  100% {
+    background: #2e77ac;
+  }
+}
+
+

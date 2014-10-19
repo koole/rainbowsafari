@@ -8,34 +8,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../UI/css/style.css">
         <link rel="stylesheet" href="css/RS.css">
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script>
         var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-        $( document ).ready(function() {
+        $(document).ready(function() {
           var rainbowSafari = $('#rainbowsafari');
           if (isSafari) {
-              window.onscroll = function () { 
+              window.onscroll = function() { 
                 var doc = document.body, 
-                scrollPosition = doc.scrollTop
-                  rainbowSafari.height( 100 ).css({
-                    top: scrollPosition - 100
-                  });
-               }; 
-           }
-          $("#btn-rainbow").click(function(){
-            rainbowSafari.toggleClass("rs-rainbow").removeClass( "rs-picture rs-blue rs-blank random-color" );;
+                scrollPosition = doc.scrollTop;
+                rainbowSafari.height(100).css({
+                  top: scrollPosition - 100
+                });
+              };
+          }
+          
+          $("#btn-rainbow").click(function() {
+            rainbowSafari.toggleClass("rs-rainbow").removeClass("rs-picture rs-blue rs-blank random-color");
           });
-          $("#btn-none").click(function(){
-            rainbowSafari.removeClass( "rs-rainbow rs-blue rs-blank random-color" );;
+          $("#btn-none").click(function() {
+            rainbowSafari.removeClass("rs-rainbow rs-blue rs-blank random-color");
           });
-          $("#btn-blue").click(function(){
-            rainbowSafari.toggleClass("rs-blue").removeClass( "rs-picture rs-rainbow rs-blank random-color" );;
+          $("#btn-blue").click(function() {
+            rainbowSafari.toggleClass("rs-blue").removeClass("rs-picture rs-rainbow rs-blank random-color");
           });
-          $("#btn-blank").click(function(){
-            rainbowSafari.toggleClass("rs-blank").removeClass( "rs-picture rs-blue rs-rainbow random-color" );;
+          $("#btn-blank").click(function() {
+            rainbowSafari.toggleClass("rs-blank").removeClass("rs-picture rs-blue rs-rainbow random-color");
           });
-          $("#btn-random").click(function(){
-            rainbowSafari.toggleClass("random-color").removeClass( "rs-picture rs-blank rs-blue rs-rainbow" );;
+          $("#btn-random").click(function() {
+            rainbowSafari.toggleClass("random-color").removeClass("rs-picture rs-blank rs-blue rs-rainbow");
           });
         });
         </script>
@@ -111,17 +112,17 @@
                 <h3>Javascript</h3>
                 <pre>
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-$( document ).ready(function() {
+$(document).ready(function() {
   if (isSafari) {
       var rainbowSafari = $('rainbowsafari');
-      window.onscroll = function () { 
+      window.onscroll = function() { 
         var doc = document.body, 
-        scrollPosition = doc.scrollTop
-          rainbowSafari.height( 100 ).css({
-            top: scrollPosition - 100
-          });
-       }; 
-   }
+        scrollPosition = doc.scrollTop;
+        rainbowSafari.height(100).css({
+          top: scrollPosition - 100
+        });
+      }; 
+  }
 });</pre>
             </div>
             <div class="col-md-6">

@@ -3,149 +3,146 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>RainbowSafari - Improving Safari 8 by 800%</title>
+        <title>RainbowSafari - Blank & Colored Safari Toolbars</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../UI/css/style.css">
         <link rel="stylesheet" href="css/RS.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
-        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
         $( document ).ready(function() {
           var rainbowSafari = $('#rainbowsafari');
-          if (isSafari) {
-              window.onscroll = function () { 
-                var doc = document.body, 
-                scrollPosition = doc.scrollTop
-                  rainbowSafari.height( 100 ).css({
-                    top: scrollPosition - 100
-                  });
-               }; 
-           }
           $("#btn-rainbow").click(function(){
-            rainbowSafari.toggleClass("rs-rainbow").removeClass( "rs-picture rs-blue rs-blank random-color" );;
+            rainbowSafari.toggleClass("rs-rainbow").removeClass( "rs-picture rs-blue rs-blank random-color rs-gif" );;
           });
           $("#btn-none").click(function(){
-            rainbowSafari.removeClass( "rs-rainbow rs-blue rs-blank random-color" );;
+            rainbowSafari.removeClass( "rs-rainbow rs-blue rs-blank random-color rs-gif" );;
           });
           $("#btn-blue").click(function(){
-            rainbowSafari.toggleClass("rs-blue").removeClass( "rs-picture rs-rainbow rs-blank random-color" );;
+            rainbowSafari.toggleClass("rs-blue").removeClass( "rs-picture rs-rainbow rs-blank random-color rs-gif" );;
           });
           $("#btn-blank").click(function(){
-            rainbowSafari.toggleClass("rs-blank").removeClass( "rs-picture rs-blue rs-rainbow random-color" );;
+            rainbowSafari.toggleClass("rs-blank").removeClass( "rs-picture rs-blue rs-rainbow random-color rs-gif" );;
           });
           $("#btn-random").click(function(){
-            rainbowSafari.toggleClass("random-color").removeClass( "rs-picture rs-blank rs-blue rs-rainbow" );;
+            rainbowSafari.toggleClass("rs-random-color").removeClass( "rs-picture rs-blank rs-blue rs-rainbow rs-gif" );;
+          });
+          $("#btn-gif").click(function(){
+            rainbowSafari.toggleClass("rs-gif").removeClass( "rs-picture rs-blank rs-blue rs-rainbow rs-random-color" );;
           });
         });
         </script>
     </head>
     <body>
         <div id="rainbowsafari" class="rs-rainbow"></div>
-        <header class="jbt-huge text-center primary-bg">
+        <header class="jumbotron">
             <div class="container">
-                <div class="text-huge">RainbowSafari<br></div>
-                <h1>Improving Safari 8 by 800% For free.</h1>
-                <div class="col-md-6">
-                    <h2>Hide what you want to hide.</h2>
-                </div>
-                <div class="col-md-6">
-                    <h2>Customize users browsers.</h2>
-                </div>
+                <h1>RainbowSafari 2</h1>
+                <p>Blank & Colored Safari Toolbars.<br>
+                Only visible in Safari 8 on Yosemite and iOS8</p>
+                <p><a href="http://github.com/LymXX/RainbowSafari" class="btn btn-default">View on Github</a></p>
             </div>
         </header>
         <div class="container">
-            <div class="col-md-12 text-center">
-                <h1>Scroll down</h1>
-                <h5>If you are using Safari 8 on Yosemite, you might have noticed by now.<br>
-                The big blue header is not visible behind the blurred "menu bar" in safari.
-                Instead, you see a nice rainbow.</h5>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Scroll down</h1>
+                    <p class="lead">If you are using the new safari on OSX Yosemite, you might have noticed by now.<br>
+                    The big blue header is not visible behind the blurred "menu bar" in safari.
+                    Instead, you see a nice rainbow.</p>
+                </div>
             </div>
-            <div class="col-md-12 text-center">
-                <h2>Why?</h2>
-                <p>You can use this to hide things (as explained below), but also to brand safari to your own brand colours, use the menu bar as a status indicator or loading bar, use it to get your users attention, use it to look totally hipster with a custom menu bar, or use it just because you like it.<br>
-                With a little more javascript, a lot more should be possible.</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Why?</h2>
+                    <p>You can use this to hide things (as explained below), but also to brand safari to your own brand colours, use the menu bar as a status indicator or loading bar, use it to get your users attention, use it to look totally hipster with a custom menu bar, or use it just because you like it.<br>
+                    With a little more javascript, a lot more should be possible.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h3>The problem</h3>
-                <p>I was annoyed by "hidden menus" not being fully hidden on Safari 8. If you look at for example a medium.com article, and scroll down, the menu at the top of the page moves up (disappears) and shows again when you scroll down. But in Safari 8, it does not fully disappear, as its still visible behind the blurred background. <p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>The problem</h3>
+                    <p>I was annoyed by "hidden menus" not being fully hidden on Safari 8. If you look at for example a medium.com article, and scroll down, the menu at the top of the page moves up (disappears) and shows again when you scroll down. But in Safari 8, it does not fully disappear, as its still visible behind the blurred background. <p>
+                </div>
+                <div class="col-md-6">
+                    <h3>The solution</h3>
+                    <p>The idea to solve this was to add an overlay top of the page, with the same color as the website background color, to hide everything that was supposed to scroll behind it. But then came up with an <strong>even better idea</strong>. The background of the overlay could be any color. <strong>Yes, any.</strong> Thats when RainbowSafari was created.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h3>The solution</h3>
-                <p>The idea to solve this was to add an overlay top of the page, with the same color as the website background color, to hide everything that was supposed to scroll behind it. But then came up with an <strong>even better idea</strong>. The background of the overlay could be any color. <strong>Yes, any.</strong> Thats when RainbowSafari was created.
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Examples</h1>
+                    <p>For not OSX Safari users:</p>
+                    <img src="img/rainbow.png" alt="Rainbow preview" class="img-responsive"><br>
+                </div>
             </div>
-            <div class="col-md-12 text-center">
-                <hr>
-                <h1>Examples</h1>
-                <p><strong>For not OSX Safari users:</strong></p>
-                <img src="img/rainbow.png" alt="Rainbow preview" style="max-width: 100%;">
-                <p>Click to disable and enable different styles</p>
-                <hr>
+            <div class="row well well-lg">
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-rainbow">Rainbow</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-blue">Static color</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-random">Animated color</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-gif">Animated image</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-blank">bg color (blank)</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default btn-block" id="btn-none">None (default)</button>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button class="btn btn-primary btn-block" id="btn-rainbow">Rainbow</button>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>The difference between blank and none might be hard to spot at first, but if you scroll up, you will notice.</p>
+                </div>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-block" id="btn-blue">Blue</button>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h2>Get it</h2>
+                    <p>Below is all the code you need to change the color of the safari menu. Just add this HTML and CSS to your website. You do not have to use a single background color. Images (even animated) and gradients are also supported.<br>
+                    Credits to <a href="https://github.com/maoberlehner">Markus Oberlehner</a> for the CSS only version and <a href="https://github.com/LiamForsyth">Liam Forsyth</a> for making images and gradients work in this CSS only version.</p>
+                </div>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-block" id="btn-random">Random Color</button>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-block" id="btn-blank">Blank (bg color)</button>
-            </div>
-            <div class="col-md-3">
-                <button class="btn btn-primary btn-block" id="btn-none">None (default)</button>
-            </div>
-            <div class="col-md-12 text-center">
-                <p>The difference between blank and none might be hard to spot at first, but if you scroll up, you will notice.</p>
-            </div>
-            <div class="col-md-12 text-center">
-                <hr>
-                <h2>Get it</h2>
-                <p>Below is all the code you need (except for jQuery, you need that too, sorry). 
-                Add the CSS to your CSS file and put the javascript between script tags in the head of your page.
-                You do not have to use a single background color. Images (even animated) and gradients are also supported.</p>
-            </div>
-            <div class="col-md-6">
-                <h3>Javascript</h3>
-                <pre>
-var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-$( document ).ready(function() {
-  if (isSafari) {
-      var rainbowSafari = $('rainbowsafari');
-      window.onscroll = function () { 
-        var doc = document.body, 
-        scrollPosition = doc.scrollTop
-          rainbowSafari.height( 100 ).css({
-            top: scrollPosition - 100
-          });
-       }; 
-   }
-});</pre>
-            </div>
-            <div class="col-md-6">
-                <h3>CSS</h3>
-                <pre>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+                    <pre>
+&#60;div id="rainbowsafari"&#62;&#60;/div&#62;</pre>
+                </div>
+                <div class="col-md-6">
+                    <h3>CSS</h3>
+                    <pre>
 #rainbowsafari {
     background-color: #FFFFFF; /* Edit This */
-    position: absolute;
-    left: 0;
     right: 0;
     top: 0;
-    height: 0px;
+    height: 100px;
     z-index: 99999999999;
+    position: fixed;
+    content: "";
+    display: block;
+    -webkit-transform: translateY(-99.99px);
 }</pre>
+                </div>
             </div>
-            <div class="col-md-12 text-center">
-                <hr>
-                <h1>Problems</h1>
-                <p>As it uses javascript to get the scroll position, RainbowSafari sometimes lags behind a little bit. Especially when using trackpads with natural scrolling. If <strong>you</strong> have a solution for this, please contribute! <br>Also, gifs only play when scrolling. Beware of that.</p>
-                <p><a href="http://github.com/LymXX/RainbowSafari" class="btn btn-inverse">View on Github</a></p>
-            </div>
-            <div class="col-md-12 text-center">
-                <hr>
-                <h1>About</h1>
-                <p>Made as a part of the <a href="http://lym.io/">lymXX projects.</a>This idea and website were put together in one evening because I wanted to try and make a 'fix' for Safari 8. Because of this, the website might be a bit low quality. This also is the first time I tried to code JS.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <hr>
+                    <h1>Problems</h1>
+                    <p>As it uses javascript to get the scroll position, RainbowSafari sometimes lags behind a little bit. Especially when using trackpads with natural scrolling. If <strong>you</strong> have a solution for this, please contribute! <br>Also, gifs only play when scrolling. Beware of that.</p>
+                    <p><a href="http://github.com/LymXX/RainbowSafari" class="btn btn-default">View on Github</a></p>
+                </div>
+                <div class="col-md-6">
+                    <hr>
+                    <h1>About</h1>
+                    <p>Made as a part of the <a href="http://lym.io/">lymXX projects.</a>This idea and website were put together in one evening because I wanted to try and make a 'fix' for Safari 8. Because of this, the website might be a bit low quality. This also is the first time I tried to code JS.<br>This websites Bootstrap theme: <a href="http://jasonbradley.me/bootstrap-ios7/">Boostrap iOS7</a></p>
+                </div>
             </div>
     </body>

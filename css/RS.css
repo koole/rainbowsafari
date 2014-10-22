@@ -1,11 +1,14 @@
 
 #rainbowsafari {
-	position: absolute; 
 	left: 0;
 	right: 0;
 	top: 0;
-	height: 0px;
+	height: 100px;
 	z-index: 99999999999;
+	position: fixed;
+	content: "";
+	display: block;
+	-webkit-transform: translateY(-99.99px);
 }
 
 .rs-rainbow {
@@ -19,17 +22,19 @@
         color-stop(100%, rgba(255, 0, 0, 1)));
 }
 
+.rs-gif {
+	background-image: url('../img/rs-gif.gif');
+}
+
 .rs-blue {
-	background-color: #1ea4f0;
+	background-color: #007aff;
 }
 
 .rs-blank {
 	background-color: inherit;
 }
 
-.random-color {
-	background: #fff;
-	
+.rs-random-color {
 	-webkit-animation: random-color 5s linear alternate infinite;
           animation: random-color 5s linear alternate infinite;
 }

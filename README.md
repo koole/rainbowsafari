@@ -4,5 +4,5 @@ Rainbow Safari is a small CSS file that allows you to change the color of the ti
 
 All code you need can be found in `css/RS.css`
 
-For more information and a demo visit http://koole.io/RainbowSafari/
+For more information and a demo visit http://koole.io/rainbowsafari/
 

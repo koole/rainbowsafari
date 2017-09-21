@@ -1,4 +1,4 @@
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   body:before {
     right: 0;
     top: 0;
@@ -9,7 +9,10 @@
     content: "";
     display: block;
     -webkit-transform: translateY(-99.99px);
-		/* Add your own styling after this to customize Rainbow Safari */
-		background-color: red;
-	}
+
+    /*
+    Customize the look of Rainbow Safari by changing the background color, like this:
+    background-color: #ff0000;
+    */
+  }
 }

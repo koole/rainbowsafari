@@ -1,4 +1,4 @@
-🌈 Rainbow Safari
+🌈 #Rainbow Safari
 =============
 Rainbow Safari is a small CSS file that allows you to change the color of the title bar on browsers like Safari on iOS and OSX.
 
@@ -8,3 +8,4 @@ All code you need can be found in `css/rainbowsafari.css`. Add this to your webs
 
 For a live demo of index.html visit http://rainbowsafari.koole.io/
 
+Koole
